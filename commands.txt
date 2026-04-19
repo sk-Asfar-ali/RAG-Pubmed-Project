@@ -1,0 +1,20 @@
+##install uv
+
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+
+## Run the app
+uv run python main.py
+
+
+## install dependencies
+uv add -r requirements.txt
+
+## install specific packages
+uv add langchain-google-genai langchain-community langchain-core langchain-text-splitters langchain-chroma sentence-transformers python-dotenv beautifulsoup4 beautifulsoup4
+
+##install virtual environment
+uv init
+uv venv
+## activate virtual environment
+uv venv activate
